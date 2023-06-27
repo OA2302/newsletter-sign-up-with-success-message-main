@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sign-up form start -->
+
+    <div class="form-container" id="formContainer">
+        <div class="info-box" id="info">
+            <p class="title">Stay updated!</p>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+            <li><img src="./assets/images/icon-list.svg" alt="Icon List" class="icon-list">Product discovery and building what matters</li>
+            <li><img src="./assets/images/icon-list.svg" alt="Icon List" class="icon-list">Measuring to ensure updates are a success</li>
+            <li><img src="./assets/images/icon-list.svg" alt="Icon List" class="icon-list">And much more!</li>
+
+            <div class="input-container">
+                <div class="label-email">
+                    <p class="email">Email address</p>
+                    <p id="emailError" class="alert">Valid email required</p>
+                </div>
+                <input placeholder="email@company.com" type="email" id="emailInput"></input>
+                <button type="submit" onclick="validateEmail()">Subscribe to monthly newsletter</button>
+            </div>
+        </div>
+        <img src="assets/images/illustration-sign-up-desktop.svg" class="svg-picture" id="svgPicture" alt="desktop picture">
+    </div>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+
+    <div class="thanks-message form-container" id="subscribeContainer">
+            <p class="title"><img src="./assets/images/icon-list.svg" alt="Icon List" class="success-icon">Thanks for subscribing!</p>
+            <p id="confirmationEmailText">A confirmation email has been sent to <span id="userEmail"></span>. Please open it and click the button inside to confirm your subscription.</p>
+            <button onclick="dismissMessage()">Dismiss message</button>
+    </div>
+
+    <!-- Success message end -->
+
+    <footer class="attribution">
+      <small>OA2302 • © 2023</small>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
